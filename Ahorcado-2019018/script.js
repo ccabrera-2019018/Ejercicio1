@@ -2,6 +2,19 @@ let options = {
     NewGame: ["Manzana","Frambuesa","Fresa","Sandia","Mandarina"],
 };
 
+//Contadores
+let wincount = 0;
+let count = 0;
+
+const displayOptions = () => {
+    optionsContainer.innerHTML += `<h3>Bienvenido, da click en el botón para comenzar.</h3>`;
+    let buttonCon = document.createElement("div");
+    for (let value in options) {
+      buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
+    }
+    optionsContainer.appendChild(buttonCon);
+  };
+
 function BotonesPantalla() {
     const root = document.querySelector(".buttons-parent");
     let buttonsDataArray = Array(26).fill(null);
