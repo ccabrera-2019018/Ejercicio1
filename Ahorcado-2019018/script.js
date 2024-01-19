@@ -1,3 +1,7 @@
+let options = {
+    NewGame: ["Manzana","Frambuesa","Fresa","Sandia","Mandarina"],
+};
+
 function BotonesPantalla() {
     const root = document.querySelector(".buttons-parent");
     let buttonsDataArray = Array(26).fill(null);
