@@ -1,5 +1,16 @@
 function BotonesPantalla() {
-    
+    const root = document.querySelector(".buttons-parent");
+    let buttonsDataArray = Array(26).fill(null);
+    let i = 65;
+    buttonsDataArray = buttonsDataArray.map((value) => {
+        return String.fromCharCode(i++);
+    });
+
+    buttonsDataArray.array.forEach(el => {
+        const btn = document.createElement("button");
+        btn.textContent = el;
+        root.appendChild(btn);
+    });
 }
 
 function draw() {
